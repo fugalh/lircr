@@ -19,5 +19,8 @@ module LIRC
     def repeat?
       @repeat > 0
     end
+    def to_s
+      sprintf("%016x %02d %s %s", @code, @repeat, @name, @remote)
+    end
   end
 end
