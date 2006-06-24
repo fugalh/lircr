@@ -14,13 +14,13 @@ module LIRC
     def initialize(str)
       code, repeat, @name, @remote = str.split(' ', 4)
       @code = code.hex
-      @repeat = repeat.to_i
+      @repeat = repeat.hex
     end
     def repeat?
       @repeat > 0
     end
     def to_s
-      sprintf("%016x %02d %s %s", @code, @repeat, @name, @remote)
+      sprintf("%016x %02x %s %s", @code, @repeat, @name, @remote)
     end
   end
 end
