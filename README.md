@@ -15,3 +15,18 @@ Usage
 	if event.name == "play"
 			system "xmms", "/av/music/3.mod"
 	end
+
+Control your MPD:
+
+	require 'lirc'
+	lirc = LIRC::Client.new
+	lirc.each do |event|
+		case event.name
+		when "play"
+			system "mpc", "play"
+		when "pause"
+			system "mpc", "pause"
+		when "stop"
+			system "mpc", "stop"
+		end
+	end
