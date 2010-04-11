@@ -2,9 +2,9 @@ require 'socket'
 
 module LIRC
 	class Client
-		def initializer dev = nil
+		def initialize dev = nil
 			dev ||= "/dev/lircd"
-			@sock = UNIXSocket.open dev
+			@sock = UNIXSocket.new dev
 		end
 
 		def next
