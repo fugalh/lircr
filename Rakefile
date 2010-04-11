@@ -8,7 +8,7 @@ begin
     gem.summary = %Q{LIRC client for Ruby}
     gem.description = %Q{}
     gem.email = "Denis.Knauf@gmail.com"
-    gem.homepage = "http://github.com/DenisKnauf/logan"
+    gem.homepage = "http://github.com/DenisKnauf/lircr"
     gem.authors = ["Denis Knauf", "Hans Fugal"]
     gem.files = %w[AUTHORS README.md VERSION lib/**/*.rb test/**/*.rb]
     gem.require_paths = %w[test lib]
