@@ -8,7 +8,7 @@ module LIRC
 		end
 
 		def next
-			Event.new @sock.readline
+			Event.new @sock.gets
 		end
 
 		def each_event

@@ -22,6 +22,7 @@ Control your MPD:
 	require 'librmpd'
 	lirc = LIRC::Client.new
 	mpd = MPD.new 'localhost', 6600
+	mpd.connect
 	lirc.each do |event|
 		case event.name
 		when "play"
